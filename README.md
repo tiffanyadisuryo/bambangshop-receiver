@@ -85,5 +85,8 @@ This is the place for you to write reflections:
 ### Mandatory (Subscriber) Reflections
 
 #### Reflection Subscriber-1
+1. RwLock lebih baik untuk sinkronisasi Vec of Notification. Ini dikarenakan, butuh banyak aksi read dan write, dan RwLock dapat melakukannya secara concurrent dan memastikan yang dapat mengakses saat write tetap eksklusif. Sementara Mutex, walau ada exclusive access untuk shared data, tapi hanya mengizinkan 1 thread saja, jadi kurang efisien.
+
+2. Sifat variabel static pada rust adalah harus punya static bertipe sync yang bersifat thread-safe yakni tidak bisa diakses banyak threads sekaligus. Selain itu, static juga bersifat immutable secara default pada rust untuk menghindari data races.
 
 #### Reflection Subscriber-2

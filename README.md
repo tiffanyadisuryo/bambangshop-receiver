@@ -90,3 +90,8 @@ This is the place for you to write reflections:
 2. Sifat variabel static pada rust adalah harus punya static bertipe sync yang bersifat thread-safe yakni tidak bisa diakses banyak threads sekaligus. Selain itu, static juga bersifat immutable secara default pada rust untuk menghindari data races.
 
 #### Reflection Subscriber-2
+1. terdapat sebuah bagian code ```dotenv().ok()``` yang digunakan untuk load environment variable dari file .env ke dalam environment aplikasi.
+
+2. Observer pattern mempermudah integrasi dari subscriber tambahan ke dalam sistem notifikasi dengan menyediakan cara yang fleksibel dan decoupled. Saat spawn lebih dari 1 instance maka diperlukan load balancing dan observer registration, tapi fleksibilitas dan decoupling dari observer pattern akan tetap membuatnya relatif mudah untuk meng-extend sistem notifikasinya.
+
+3. Tidak <3
